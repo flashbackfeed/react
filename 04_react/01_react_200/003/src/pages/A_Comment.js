@@ -1,9 +1,17 @@
-import "../assets/Comment.css"
-
-import React from 'react'
+import "../assets/Comment.css";
+import "../assets/styles.css";
+import { useState } from 'react';
+import React from 'react';
 
 
 function A_Comment() {
+  // TODO : 변수/함수 정의 : 여기
+  // 사용법 : let [변수, set변수] = useState(초기값)
+  // set변수 : setter() 함수 (변수 값 저장 용도 함수)
+  // 화면 바인딩 용도 : useState() 함수 (훅(hook) 함수)
+  let [name, setName] = useState("홍길동");
+  let [comment, setComment] = useState("메모");
+
   return (
     <div className="wrapper">
     <div className="imageContainer">
@@ -14,8 +22,8 @@ function A_Comment() {
     </div>
 
     <div className="contentContainer">
-      <span className="nameText">{}</span>
-      <span className="commentText">{}</span>
+      <span className="nameText">{name} </span>
+      <span className="commentText">{comment}</span>
     </div>
   </div>
   )
